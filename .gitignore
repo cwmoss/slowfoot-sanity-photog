@@ -1,0 +1,17 @@
+.env
+.env.*
+composer.lock
+vendor
+.netrc
+.htaccess
+.DS_Store
+public-key.pem
+data-*
+node_modules
+dist
+cache
+download
+web/images
+lerna-debug.log
+draft/
+Makefile
