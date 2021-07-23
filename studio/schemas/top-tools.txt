@@ -1,0 +1,38 @@
+
+npm install react-icons
+
+sanity install media-library
+https://www.sanity.io/plugins/sanity-plugin-media-library
+
+
+sanity install media
+https://www.sanity.io/plugins/sanity-plugin-media
+https://github.com/robinpyon/sanity-plugin-media
+
+
+sanity install autocomplete-tags
+https://www.sanity.io/plugins/autocomplete-tags
+
+
+sanity install @sanity/color-input
+sanity install @sanity/dashboard
+sanity install dashboard-widget-document-list
+
+https://github.com/sanity-io/sanity-template-kitchen-sink
+
+
+*[_type == "gallery_page"]{
+  _id,
+   _type,
+  gallery{
+  	images[]{
+  	caption,
+  	asset->
+		}
+  }
+}
+
+*[_type == "sanity.imageAsset"]
+
+*[!(_type match "system.*") && !(_id in path("drafts.**"))]
+
