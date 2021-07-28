@@ -9,7 +9,13 @@
            
         }
     ],
+    "autoload": {
+        "files": [
+            "src/helper.php"
+        ]
+    },
     "require": {
-        "cwmoss/slowfoot-lib": "dev-main"
+        "cwmoss/slowfoot-lib": "dev-main",
+        "sanity/sanity-php": "^1.5"
     }
 }

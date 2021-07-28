@@ -18,5 +18,19 @@ export default {
             type: "link", 
             title: "Navigation Item Link"
           }
-    ]
+    ],
+    preview: {
+        select: {
+          title: 'text',
+          rtitle: 'link.internal.title',
+        },
+        prepare ({title, rtitle}) {
+          // const dateSegment = format(publishedAt, 'YYYY/MM')
+       
+          return {
+            title: title?title:(rtitle?rtitle:'')
+           
+          }
+        }
+    }
 }

@@ -8,7 +8,7 @@ import { GoBrowser as PageIcon, GoHome, GoSettings, GoPencil } from "react-icons
 //import PreviewIFrame from './src/components/previewIFrame'
 
 const hiddenDocTypes = (listItem) =>
-  !['route', 'navigationMenu', 'post', 'page', 'site_settings', 'xgallery_page', 'category'].includes(
+  !['route', 'navigation', 'content', 'page', 'site_settings', 'gallery_page', 'category'].includes(
     listItem.getId()
   )
 
@@ -16,18 +16,27 @@ export default () =>
   S.list()
     .title('Content')
     .items([
-      /*
-      S.documentListItem()
-        .title('Frontpage')
+      
+      S.listItem()
+        .title('Inhalte')
+        .schemaType('content')
+        .child(S.documentTypeList('content').title('Inhalte')),
+
+      S.listItem()
+        .title('Seiten')
         .schemaType('page')
-        .icon(GoHome)
-        .child(
-          S.document()
-            .schemaType('page')
-            .documentId('frontpage')
-            .views([S.view.form()])
-        ),
-      */
+        .child(S.documentTypeList('page')),
+
+      S.listItem()
+        .title('Galleries')
+        .schemaType('gallery_page')
+        .child(S.documentTypeList('gallery_page')),
+
+      S.listItem()
+        .title('Navigation')
+        .schemaType('navigation')
+        .child(S.documentTypeList('navigation')),
+
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above

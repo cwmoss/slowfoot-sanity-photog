@@ -2,6 +2,7 @@
 $settings = $get('site_settings');
 $title = $settings['title'];
 $nav = $ref($settings['nav_main']);
+$fnav = $ref($settings['nav_footer']);
 ?>
 <!doctype html>
 <html>
@@ -18,15 +19,14 @@ $nav = $ref($settings['nav_main']);
 <body data-barba="wrapper">
     <header>
 <nav>
-    <span>MUMOK</span>
+    <span class="logo"><a href="<?=path_page('/')?>"><?=$title?></a></span>
     <ul>
     <?foreach ($nav['items'] as $n) {
-    $url = $n['link']['internal'] ? $path($n['link']['internal']['_ref']) : $n['link']['external'];
-    $txt = $n['text']; ?>
-        <li><a href="<?=$url?>"><?=$txt?></a></li>
+    ?>
+        <li><?=$sanity_link($n)?></li>
     <?php
 }?>
-    <li><a href="<?=path_page('/')?>">Artists</a></li>
+    
     </ul>
 </nav>
 </header>
@@ -40,6 +40,11 @@ $nav = $ref($settings['nav_main']);
 <footer>
     <div class="content">
 &copy; 2021
+
+<?foreach ($fnav['items'] as $n) {?>
+    <p><?=$sanity_link($n)?></p>
+<?}?>
+
 </div>
 </footer>
 

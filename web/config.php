@@ -27,6 +27,8 @@ return [
     ],
     'templates' => [
         'gallery_page' => '/g/:slug.current',
+        'page' => '/:slug.current',
+        'content' => '/:slug.current',
     ],
     'assets' => [
         'dir' => 'images',

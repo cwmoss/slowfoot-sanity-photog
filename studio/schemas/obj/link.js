@@ -11,7 +11,13 @@ export default {
     name: 'internal',
     description: 'Select pages for navigation',
     type: 'reference',
-    to: [{ type: 'gallery_page' }], 
+    to: [{ type: 'content' }, { type: 'page' }, { type: 'gallery_page' }], 
+    },
+    {
+      name: 'route',
+      title: 'Interals URL',
+      description: "Some path that is created by SSG, not controlled by CMS",
+      type: 'url',
     },
     {
       name: 'external',
@@ -19,5 +25,6 @@ export default {
       description:"Use fully qualified URLS for external link",
       type: 'url',
     },
+
   ]
 };
