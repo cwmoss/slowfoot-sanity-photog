@@ -22,16 +22,9 @@ if ($page['gallery'] && $page['gallery']['images']) {
 
 
 	<?if ($page['sections']) {
-    foreach ($page['sections'] as $section) {
-        $content = $ref($section['ref']); 
-        ?>
-    
-    <section class="section_<?=$content['_type']?>">
+    foreach ($page['sections'] as $section) {?>
 
-        <h2><?=$section['title']?></h2>
-        <p><?=$content['_type']?></p>
-
-	</section>
+<?=$partial("section", ['section'=>$section])?>
 
 	<?}?>
     
