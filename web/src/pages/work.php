@@ -1,5 +1,5 @@
 <page-query>
-    *('_type == "gallery_page')
+    *(_type == "gallery_page")
     # order(title) 
     limit(12)
 </page-query>
