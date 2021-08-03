@@ -11,7 +11,8 @@ return [
         'sanity' => [
             'dataset' => 'production',
             'projectId' => $_ENV['SANITY_ID'],
-            'useCdn' => true,
+            'useCdn' => false,
+            'token' => $_ENV['SANITY_TOKEN']
             // 'query' => '*[_type=="custom-type-query"]'
         ]
        
