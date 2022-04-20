@@ -2,6 +2,8 @@
     "name": "cwmoss/slowfoot",
     "type": "project",
     "version": "1.0",
+    "license": "MIT",
+    "description": "example website with sanity.io as CMS and slowfoot as SSG",
     "repositories": [
         {
             "type": "git",
