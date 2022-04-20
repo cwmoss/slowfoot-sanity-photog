@@ -40,8 +40,8 @@ jobs:
 
     - name: Build website
       env:
-        SANITY_ID: '${{ secrets.SANITY_ID }}'
-        SANITY_TOKEN: '${{ secrets.SANITY_TOKEN }}'
+        SANITY_ID: ${{ secrets.SANITY_ID }}
+        SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
       run: ./slowfoot build
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
