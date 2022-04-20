@@ -3,6 +3,7 @@ vendor/
 logs/
 draft/
 dist/
+var/
 composer.lock
 node_modules/
 .quasar/

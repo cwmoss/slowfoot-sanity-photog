@@ -9,7 +9,7 @@ $images = [];
 if ($page['gallery'] && $page['gallery']['images']) {
     $images = $page['gallery']['images'];
 }
-$local_img = $asset_from_file('DSC_0491-2.jpg');
+// $local_img = $asset_from_file('DSC_0491-2.jpg');
 ?>
 <article>
     
@@ -31,7 +31,7 @@ $local_img = $asset_from_file('DSC_0491-2.jpg');
 <p><?=$image($local_img, ['s' => '100x900', 'mode' => 'fill', 'fp' => [0.4862745098039215, 0.49]])?></p>
 <p><?=$image($local_img, ['s' => '100x900', 'mode' => 'fill', 'fp' => [0.4862745098039215, 0]])?></p>
 <p><?=$image($local_img, ['s' => '600x300', 'mode' => 'fill'])?></p>
-*/ 
+*/
 ?>
 
 

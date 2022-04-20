@@ -7,6 +7,7 @@ return [
     // TODO: solve genenv vs ENV problem
     'path_prefix' => getenv('PATH_PREFIX') ?: $_ENV['PATH_PREFIX'] ?: '',
     'title_template' => '',
+    'store' => $_ENV['SLFT_ENV']=='dev'?'sqlite':null,
     'sources' => [
         'sanity' => [
             'dataset' => 'production',
@@ -32,18 +33,21 @@ return [
         'content' => '/:slug.current',
     ],
     'assets' => [
-        'dir' => 'images',
+        'src' => 'images',
         'path' => '/images',
         'profiles' => [
             'small' => [
-                's' => '600x400',
+                'size' => '600x400',
                 'mode' => 'fit'
             ],
             'gallery' => [
-                's' => '700x', 
+                'size' => '700x', 
                 '4c' => ['creator'=>'Artist Name here :)']
             ]
         ]
+    ],
+    'plugins' => [
+        'sanity'
     ],
     'hooks' => [
         'on_load' => function ($row, $ds) {
