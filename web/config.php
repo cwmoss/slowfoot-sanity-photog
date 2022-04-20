@@ -1,6 +1,6 @@
 <?php
-#print_r($_ENV);
-#print_r(getenv());
+print_r($_ENV);
+print_r(getenv());
 return [
     'site_name' => 'Photographers Protfolio',
     'site_description' => 'look at beautiful works of art',
