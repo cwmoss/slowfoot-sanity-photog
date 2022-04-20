@@ -1,11 +1,12 @@
 <?php
-
+#print_r($_ENV);
+#print_r(getenv());
 return [
     'site_name' => 'Photographers Protfolio',
     'site_description' => 'look at beautiful works of art',
     'site_url' => '',
     // TODO: solve genenv vs ENV problem
-    'path_prefix' => getenv('PATH_PREFIX') ?: $_ENV['PATH_PREFIX'] ?: '',
+    'path_prefix' => getenv('PATH_PREFIX') ?: $_ENV['PATH_PREFIX']??'',
     'title_template' => '',
     'store' => $_ENV['SLFT_ENV']=='dev'?'sqlite':null,
     'sources' => [
