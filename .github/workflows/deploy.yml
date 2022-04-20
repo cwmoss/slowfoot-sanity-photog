@@ -22,7 +22,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
+      with:
+        php-version: 7.4
+        
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
 
@@ -42,7 +44,7 @@ jobs:
       env:
         SANITY_ID: ${{ secrets.SANITY_ID }}
         SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
-      run: ./slowfoot build
+      run: php -d short_open_tag=On -i
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
