@@ -37,6 +37,12 @@ jobs:
     - name: Install dependencies
       run: composer install --no-progress
 
+    - name: Build website
+      env:
+        SANITY_ID: ${{ secrets.SANITY_ID }}
+        SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
+      run: ./slowfoot build
+      
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
