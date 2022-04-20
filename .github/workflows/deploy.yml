@@ -54,3 +54,6 @@ jobs:
 
     # - name: Run test suite
     #   run: composer run-script test
+    # TODO: 
+    #   rsync
+    #  https://github.com/marketplace/actions/rsync-deployments-action
