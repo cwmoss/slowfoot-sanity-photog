@@ -16,6 +16,7 @@ jobs:
     defaults:
       run:
         working-directory: web
+        
     runs-on: ubuntu-latest
 
     steps:
