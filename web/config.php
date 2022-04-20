@@ -14,7 +14,8 @@ return [
             'dataset' => 'production',
             'projectId' => $_ENV['SANITY_ID'],
             'useCdn' => false,
-            'token' => $_ENV['SANITY_TOKEN']
+            'token' => $_ENV['SANITY_TOKEN'],
+            'apiVersion' => '2022-04-20',
             // 'query' => '*[_type=="custom-type-query"]'
         ]
        
